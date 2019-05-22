@@ -1,5 +1,4 @@
-# Unity-TwistedSilicon
-year 1 production racing game
+# Github Instructions
 
 ## Cloning Repository
 
