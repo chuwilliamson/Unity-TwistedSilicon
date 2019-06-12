@@ -4,10 +4,27 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Backfin_1
+    100004: Backfin_2
+    100006: Backfin_3
+    100008: Backfin_4
+    100010: Base
+    100012: Hero_Car
+    100014: Hero_Car_Armature
     400000: //RootNode
+    400002: Backfin_1
+    400004: Backfin_2
+    400006: Backfin_3
+    400008: Backfin_4
+    400010: Base
+    400012: Hero_Car
+    400014: Hero_Car_Armature
     2100000: No Name
+    2100002: Hero_Car_Mat
     2300000: //RootNode
+    2300002: Hero_Car
     3300000: //RootNode
+    3300002: Hero_Car
     4300000: Hero_Car
   externalObjects: {}
   materials:
