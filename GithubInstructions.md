@@ -1,7 +1,7 @@
 # Github Instructions
 
 ## Cloning Repository
-
+0. did it
 1. clone the repo
 2. checkout your branch
 3. add things
