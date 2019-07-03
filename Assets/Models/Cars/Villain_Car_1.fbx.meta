@@ -1,55 +1,54 @@
 fileFormatVersion: 2
-guid: 5670afa71d4962f438e031e97e08ec07
+guid: 91ce574a71db13d43837dfe9316c39ab
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Armature
-    100004: Base
-    100006: Fin_1_L
-    100008: Fin_1_R
-    100010: Fin_2_L
-    100012: Fin_2_R
-    100014: Fin_3_L
-    100016: Fin_3_R
-    100018: Fin_4_L
-    100020: Fin_4_R
-    100022: Fin_5_L
-    100024: Fin_5_R
-    100026: Fin_6_L
-    100028: Fin_6_R
-    100030: Fin_7_L
-    100032: Fin_7_R
-    100034: Fin_8_L
-    100036: Fin_8_R
-    100038: Villain_Car
-    400000: //RootNode
-    400002: Armature
-    400004: Base
-    400006: Fin_1_L
-    400008: Fin_1_R
-    400010: Fin_2_L
-    400012: Fin_2_R
-    400014: Fin_3_L
-    400016: Fin_3_R
-    400018: Fin_4_L
-    400020: Fin_4_R
-    400022: Fin_5_L
-    400024: Fin_5_R
-    400026: Fin_6_L
-    400028: Fin_6_R
-    400030: Fin_7_L
-    400032: Fin_7_R
-    400034: Fin_8_L
-    400036: Fin_8_R
-    400038: Villain_Car
-    2100000: No Name
-    2100002: Villain_Car_Mat
-    2300000: //RootNode
-    2300002: Villain_Car
-    3300000: //RootNode
-    3300002: Villain_Car
+    100000: Base
+    100002: Fin_1_L
+    100004: Fin_1_R
+    100006: Fin_2_L
+    100008: Fin_2_R
+    100010: Fin_3_L
+    100012: Fin_3_R
+    100014: Fin_4_L
+    100016: Fin_4_R
+    100018: Fin_5_L
+    100020: Fin_5_R
+    100022: Fin_6_L
+    100024: Fin_6_R
+    100026: Fin_7_L
+    100028: Fin_7_R
+    100030: Fin_8_L
+    100032: Fin_8_R
+    100034: Villain_Car
+    100036: //RootNode
+    100038: Villain_Car_Armature
+    400000: Base
+    400002: Fin_1_L
+    400004: Fin_1_R
+    400006: Fin_2_L
+    400008: Fin_2_R
+    400010: Fin_3_L
+    400012: Fin_3_R
+    400014: Fin_4_L
+    400016: Fin_4_R
+    400018: Fin_5_L
+    400020: Fin_5_R
+    400022: Fin_6_L
+    400024: Fin_6_R
+    400026: Fin_7_L
+    400028: Fin_7_R
+    400030: Fin_8_L
+    400032: Fin_8_R
+    400034: Villain_Car
+    400036: //RootNode
+    400038: Villain_Car_Armature
+    2100000: Villain_Car_Mat
+    2100002: Hero_Car_Mat
     4300000: Villain_Car
+    7400000: Villain_Car_Armature|Villain_Car_Boost_Ani
+    9500000: //RootNode
+    13700000: Villain_Car
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -101,8 +100,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -127,7 +126,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
