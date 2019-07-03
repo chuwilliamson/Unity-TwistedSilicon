@@ -23,6 +23,7 @@ ModelImporter:
     100034: Villain_Car
     100036: //RootNode
     100038: Villain_Car_Armature
+    100040: Armature
     400000: Base
     400002: Fin_1_L
     400004: Fin_1_R
@@ -43,10 +44,12 @@ ModelImporter:
     400034: Villain_Car
     400036: //RootNode
     400038: Villain_Car_Armature
+    400040: Armature
     2100000: Villain_Car_Mat
     2100002: Hero_Car_Mat
     4300000: Villain_Car
     7400000: Villain_Car_Armature|Villain_Car_Boost_Ani
+    7400002: Armature|Boost
     9500000: //RootNode
     13700000: Villain_Car
   externalObjects: {}
