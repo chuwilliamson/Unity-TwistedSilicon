@@ -112,7 +112,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 8458c0a2662cbed4e8a4398d4c8fbd5d, type: 2}
 --- !u!1 &27355881
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +799,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 60cc2ebce330db847809d73dc3bbded6, type: 2}
+    - target: {fileID: 100002, guid: 1ccee03f34c3e754b806a187d863df2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ccee03f34c3e754b806a187d863df2c, type: 3}
   m_IsPrefabAsset: 0
