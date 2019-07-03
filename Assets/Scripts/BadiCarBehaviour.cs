@@ -13,7 +13,7 @@ public class BadiCarBehaviour : MonoBehaviour {
     {
         agent = GetComponent<NavMeshAgent>();
 
-        agent.autoBraking = false;
+        agent.autoBraking = false; 
         //doing this keeps it seek instead of arrive^
 
 
