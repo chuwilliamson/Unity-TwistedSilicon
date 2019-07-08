@@ -1,16 +1,15 @@
 fileFormatVersion: 2
-guid: af05c8a9a46ffd24c93cdc6f18ed24e5
+guid: e34ad60e47474744785b3325c464e4d9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Building_Small_A1
     400000: //RootNode
-    400002: Building_Small_A1
-    2100000: lambert1
-    2300000: Building_Small_A1
-    3300000: Building_Small_A1
-    4300000: Building_Small_A1
+    2100000: Light
+    2100002: initialShadingGroup2
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cylinder_Light
   externalObjects: {}
   materials:
     importMaterials: 1
