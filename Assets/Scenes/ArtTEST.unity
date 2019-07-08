@@ -1861,6 +1861,7 @@ GameObject:
   - component: {fileID: 363886371}
   - component: {fileID: 363886370}
   - component: {fileID: 363886369}
+  - component: {fileID: 363886374}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -1981,6 +1982,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &363886374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 363886368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3604972af3eccef43b164ab0357e52ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &365543040
 GameObject:
   m_ObjectHideFlags: 0
