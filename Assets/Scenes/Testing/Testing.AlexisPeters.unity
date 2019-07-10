@@ -4705,7 +4705,7 @@ Transform:
   m_PrefabInternal: {fileID: 250269654}
 --- !u!4 &394667487 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4633802122414804, guid: 16426440a07ad544299f547f19ca9d80,
+  m_CorrespondingSourceObject: {fileID: 4568878574451968, guid: 5ce40b3af12562a489a3eeaf0367f58e,
     type: 2}
   m_PrefabInternal: {fileID: 1116031054}
 --- !u!1 &397965967
@@ -5873,11 +5873,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1125967011590604, guid: f407e08d13858364e9f37f5076964cd0, type: 2}
       propertyPath: m_Name
-      value: Building_Block1
+      value: Block1
       objectReference: {fileID: 0}
     - target: {fileID: 1125967011590604, guid: f407e08d13858364e9f37f5076964cd0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1127899619314060, guid: f407e08d13858364e9f37f5076964cd0, type: 2}
       propertyPath: m_IsActive
@@ -11503,7 +11503,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 8ec1cc01003b8e84195422e5724e793d, type: 3}
+  - {fileID: 2100000, guid: 68fa371e1d7d03841b7f52656b0e116d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11958,44 +11958,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 326369893}
     m_Modifications:
-    - target: {fileID: 4633802122414804, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
+    - target: {fileID: 4568878574451968, guid: 5ce40b3af12562a489a3eeaf0367f58e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 277.6
       objectReference: {fileID: 0}
-    - target: {fileID: 4633802122414804, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
+    - target: {fileID: 4568878574451968, guid: 5ce40b3af12562a489a3eeaf0367f58e, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4633802122414804, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
+    - target: {fileID: 4568878574451968, guid: 5ce40b3af12562a489a3eeaf0367f58e, type: 2}
       propertyPath: m_LocalPosition.z
       value: -95
       objectReference: {fileID: 0}
-    - target: {fileID: 4633802122414804, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
+    - target: {fileID: 4568878574451968, guid: 5ce40b3af12562a489a3eeaf0367f58e, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4633802122414804, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
+    - target: {fileID: 4568878574451968, guid: 5ce40b3af12562a489a3eeaf0367f58e, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4633802122414804, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
+    - target: {fileID: 4568878574451968, guid: 5ce40b3af12562a489a3eeaf0367f58e, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4633802122414804, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
+    - target: {fileID: 4568878574451968, guid: 5ce40b3af12562a489a3eeaf0367f58e, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4633802122414804, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
+    - target: {fileID: 4568878574451968, guid: 5ce40b3af12562a489a3eeaf0367f58e, type: 2}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1125967011590604, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
-      propertyPath: m_Name
-      value: Building_Block3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 16426440a07ad544299f547f19ca9d80, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 5ce40b3af12562a489a3eeaf0367f58e, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1123663534
 GameObject:
@@ -13628,7 +13624,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1125967011590604, guid: bcaa4725e318c6640859ee85a02a6169, type: 2}
       propertyPath: m_Name
-      value: Building_Block2
+      value: Block2
       objectReference: {fileID: 0}
     - target: {fileID: 4633802122414804, guid: bcaa4725e318c6640859ee85a02a6169, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -13636,7 +13632,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1125967011590604, guid: bcaa4725e318c6640859ee85a02a6169, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcaa4725e318c6640859ee85a02a6169, type: 2}
@@ -15674,7 +15670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1477317748}
   m_Layer: 0
-  m_Name: Block1 (1)
+  m_Name: Block1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16879,7 +16875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596940598}
   m_Layer: 0
-  m_Name: Block1
+  m_Name: Block1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
