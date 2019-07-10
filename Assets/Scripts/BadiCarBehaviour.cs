@@ -8,13 +8,14 @@ public class BadiCarBehaviour : MonoBehaviour {
     public GameObject[] Waypoint;
     private int curntpoint = 0;
     private NavMeshAgent agent;
+    public int LapCounter = 0;
+    public bool chetCheck = false;
 
     void Start ()
     {
         agent = GetComponent<NavMeshAgent>();
 
         agent.autoBraking = false; 
-        //doing this keeps it seek instead of arrive^
 
 
         NextPoint();
@@ -27,7 +28,6 @@ public class BadiCarBehaviour : MonoBehaviour {
         {
             return;
         }
-        //incase No points are set up^
 
         agent.destination = Waypoint[curntpoint].transform.position;
 
@@ -39,6 +39,17 @@ public class BadiCarBehaviour : MonoBehaviour {
         if (!agent.pathPending && agent.remainingDistance < 50)
         {
             NextPoint();
+        }
+
+        if (curntpoint == 1 && chetCheck == false)
+        {
+            LapCounter++;
+            chetCheck = true;
+        }
+
+        if (curntpoint == 11)
+        {
+            chetCheck = false;
         }
     }
 }

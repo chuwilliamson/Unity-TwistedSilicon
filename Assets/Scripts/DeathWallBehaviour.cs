@@ -9,13 +9,15 @@ public class DeathWallBehaviour : MonoBehaviour
     public GameObject[] Waypoint;
     private int curntpoint = 0;
     private NavMeshAgent agent;
+    public int LapCounter = 0;
+    public bool chetCheck = false;
+
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
 
         agent.autoBraking = false;
-        //doing this keeps it seek instead of arrive^
 
 
         NextPoint();
@@ -28,7 +30,6 @@ public class DeathWallBehaviour : MonoBehaviour
         {
             return;
         }
-        //incase No points are set up^
 
         agent.destination = Waypoint[curntpoint].transform.position;
 
@@ -41,5 +42,17 @@ public class DeathWallBehaviour : MonoBehaviour
         {
             NextPoint();
         }
+
+        if (curntpoint == 1 && chetCheck == false)
+        {
+            LapCounter++;
+            chetCheck = true;
+        }
+
+        if (curntpoint == 11)
+        {
+            chetCheck = false;
+        }
+
     }
 }

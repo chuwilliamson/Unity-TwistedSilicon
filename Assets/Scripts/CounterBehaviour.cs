@@ -13,7 +13,8 @@ public class CounterBehaviour : MonoBehaviour {
     {
     }
 
-    private void OnCollisionEnter(Collision other)
+
+    private void OnTriggerEnter(Collider other)
     {
         if (chetCheck == false)
         {
@@ -30,6 +31,7 @@ public class CounterBehaviour : MonoBehaviour {
         {
             chetCheck = false;
         }
+
 
     }
 
