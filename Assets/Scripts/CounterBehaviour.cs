@@ -5,34 +5,38 @@ using UnityEngine.AI;
 
 
 public class CounterBehaviour : MonoBehaviour {
-    public GameObject[] finishLine;
     public int lapCounter = 0;
-//    private NavMeshAgent agent;
-
+    int i = 0;
+    public bool chetCheck = false;
 
     void Start ()
     {
-       // agent = GetComponent<NavMeshAgent>();
-        goUp();
     }
 
-    void goUp()
+    private void OnCollisionEnter(Collision other)
     {
-        if (finishLine.Length == 5)
+        if (chetCheck == false)
         {
-            lapCounter++;
+            if (other.gameObject.CompareTag("Waypoint"))
+            {
+                lapCounter++;
+
+                chetCheck = true;
+            }
+
         }
 
-        //agent.destination = finishLine[0].transform.position;
+        if (other.gameObject.CompareTag("chetPoint"))
+        {
+            chetCheck = false;
+        }
 
     }
+
+
 
     void Update ()
     {
-     //   if (!agent.pathPending && agent.remainingDistance < 50)
-      //  {
-            goUp();
-     //   }
 
     }
 }
