@@ -12,7 +12,7 @@ Material:
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2999
   stringTagMap: {}
   disabledShaderPasses:
   - SHADOWCASTER
@@ -61,10 +61,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_B310C085: 0
-    - Vector1_3DCEC50D: 300
+    - Vector1_3DCEC50D: 1
     - Vector1_3DF16D52: 10
     - Vector1_4195AEA7: 0.4
     - Vector1_8C22809E: 0.8
+    - Vector1_AEE354AA: 0.5
     - Vector1_E3F7FE3A: 5
     - _AlphaClip: 0
     - _Blend: 0
