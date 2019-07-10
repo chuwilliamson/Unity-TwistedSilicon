@@ -2,26 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserBehaviour : MonoBehaviour {
-
-    GameObject user;
-
-	// Use this for initialization
-	void Start () {
-        transform.forward = user.transform.forward;
-        //Meant to represent starting speed
-        rigidbody.constantForce *= 200;
-        //
-	}
-
-    private void OnCollisionEnter(Collision collision)
+namespace Beaux
+{
+    public class LaserBehaviour : MonoBehaviour
     {
-        if (collision.gameObject.tag == "Player" && collision.gameObject.CarFactorBehaviour.
-                                                    shieldOn == false)
+
+        GameObject user;
+
+        Rigidbody lsrSpd;
+
+        // Use this for initialization
+        void Start()
         {
-            //Meant to lower current speed by such
-            collision.rigidbody.velocity -= 30;
-            //
+            lsrSpd = GetComponent<Rigidbody>();
+            transform.forward = user.transform.forward;
+            lsrSpd.AddForce(transform.forward * 200);
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            CarFactorBehaviour shieldCheck = collision.gameObject.GetComponent<CarFactorBehaviour>();
+            if (collision.gameObject.tag == "Player" && shieldCheck.shieldOn == false)
+            {
+                //Meant to lower current speed by such
+                collision.rigidbody.AddForce(collision.rigidbody.velocity/30);
+            
+            }
         }
     }
 }

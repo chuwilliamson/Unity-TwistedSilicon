@@ -66,10 +66,11 @@ Material:
     m_Floats:
     - Boolean_B310C085: 0
     - Vector1_31257809: 1
-    - Vector1_3DCEC50D: 300
+    - Vector1_3DCEC50D: 2
     - Vector1_3DF16D52: 10
     - Vector1_4195AEA7: 0.4
     - Vector1_422EDC15: 0
+    - Vector1_728B8745: 0.5
     - Vector1_859B5226: 1
     - Vector1_8C22809E: 0.8
     - Vector1_AF3286B0: 1

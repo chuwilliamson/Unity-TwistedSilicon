@@ -6,12 +6,19 @@ using UnityEngine;
 /// when a carfactorbehaviour enters this trigger volume
 /// increment it'sWayPointPass
 /// </summary>
-public class WayPointBehaviour : MonoBehaviour {
-    //why doesn't the cart handle this?
-    private void OnTriggerEnter(Collider other)
+/// 
+
+namespace Beaux
+{
+    public class WayPointBehaviour : MonoBehaviour
     {
-        
-        var cb = other.GetComponent<CarFactorBehaviour>();
-        cb.WayPointPass += 1;
+        //why doesn't the cart handle this? - Mr. Matt
+        // Because this is a trigger function
+        private void OnTriggerEnter(Collider other)
+        {
+
+            var cb = other.GetComponent<CarFactorBehaviour>();
+            cb.WayPointPass += 1;
+        }
     }
 }

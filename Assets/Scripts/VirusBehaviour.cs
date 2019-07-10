@@ -2,41 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VirusBehaviour : MonoBehaviour {
+namespace Beaux
+{
+    public class VirusBehaviour : MonoBehaviour
+    {
 
-    GameObject user;
-    GameObject target;
-    List<GameObject> placement;
+        GameObject user;
+        GameObject target;
+        List<GameObject> placement;
 
-    float counter;
+        float counter;
 
-	// Use this for initialization
-	void Start () {
-        //Meant to represent starting speed
-        rigidbody.constantForce *= 180;
-        //
-        if (user != placement[0])
+        // Use this for initialization
+        void Start()
         {
-            target = placement[0];
+            //Meant to represent starting speed
+            //rigidbody.constantForce *= 180;
+            //
+            if (user != placement[0])
+            {
+                target = placement[0];
+            }
+            else
+            {
+                target = placement[1];
+            }
+
+            //Meant to lower current speed by such
+            //target.gameObject.velocity -= 80;
+            //
+
+            counter = 0;
         }
-        else
+
+        // Update is called once per frame
+        void Update()
         {
-            target = placement[1];
+            counter += Time.deltaTime * 180;
+            if (counter >= 180)
+            {
+                enabled = false;
+            }
         }
-
-        //Meant to lower current speed by such
-        target.gameObject.velocity -= 80;
-        //
-
-        counter = 0;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        counter += Time.deltaTime * 180;
-        if (counter >= 180)
-        {
-            enabled = false;
-        }
-	}
 }

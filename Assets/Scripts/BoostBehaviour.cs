@@ -2,33 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoostBehaviour : MonoBehaviour {
+namespace Beaux
+{
+    public class BoostBehaviour : MonoBehaviour
+    {
+        [SerializeField]
+        float timer;
 
-    float timer;
+        UnityStandardAssets.Vehicles.Car.CarController maxSpd;
+        Rigidbody carSpd;
+        
 
-	// Use this for initialization
-	void Start () {
-        //Can't remember how to call script's piece without getComponent
-        CarController.Topspeed = 200;
-        //
-
-        //Meant to increase current speed by such
-        rigidbody.velocity += 50;
-        //
-
-        timer = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        timer += Time.deltaTime * 60;
-
-        if (timer >= 240)
+        // Use this for initialization
+        void OnEnable()
         {
-            //Can't remember how to call script's piece without getComponent
-            CarController.Topspeed = 150;
+
+            maxSpd = GetComponent<UnityStandardAssets.Vehicles.Car.CarController>();
+            carSpd = GetComponent<Rigidbody>();
+
+            maxSpd.MaxSpeed = 200;
+
+            //Meant to increase current speed by such
+            carSpd.AddForce(carSpd.velocity*50, ForceMode.Acceleration);
             //
-            enabled = false;
+
+            timer = 0;
         }
-	}
+
+        // Update is called once per frame
+        void Update()
+        {
+            timer += Time.deltaTime;
+            
+
+            if (timer >= 1.5)
+            {
+                carSpd.AddForce(-carSpd.velocity);
+                maxSpd.MaxSpeed = 150;
+                timer = 0;
+                this.enabled = false;
+            }
+        }
+    }
 }

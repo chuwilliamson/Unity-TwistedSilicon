@@ -6,6 +6,11 @@ namespace UnityStandardAssets.Utility
 {
     public class ActivateTrigger : MonoBehaviour
     {
+
+        private void Start()
+        {
+            this.enabled = false;
+        }
         // A multi-purpose script which causes an action to occur when
         // a trigger collider is entered.
         public enum Mode
