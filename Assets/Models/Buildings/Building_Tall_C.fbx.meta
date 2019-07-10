@@ -9,9 +9,17 @@ ModelImporter:
     400002: Building_Tall_C1
     2100000: lambert1
     2300000: Building_Tall_C1
+    2300002: //RootNode
     3300000: Building_Tall_C1
+    3300002: //RootNode
     4300000: Building_Tall_C1
-  externalObjects: {}
+    4300002: pCube3
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: b35fb1e14793572469378aba6ce3d2b1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

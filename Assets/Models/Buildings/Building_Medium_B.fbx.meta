@@ -11,7 +11,12 @@ ModelImporter:
     2300000: Building_Medium_B1
     3300000: Building_Medium_B1
     4300000: Building_Medium_B1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: ab7aea71fd5ec5848a290d31a905ef6b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
