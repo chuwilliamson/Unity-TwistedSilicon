@@ -20,6 +20,7 @@ namespace Beaux
             maxSpd = GetComponent<UnityStandardAssets.Vehicles.Car.CarController>();
             carSpd = GetComponent<Rigidbody>();
 
+            
             maxSpd.MaxSpeed = 200;
 
             //Meant to increase current speed by such
@@ -34,9 +35,10 @@ namespace Beaux
         {
             timer += Time.deltaTime;
             
-
+            // Checks if the boost has ended or not
             if (timer >= 1.5)
             {
+                //Takes speed off, lowers max spd, timer set back to 0, boost script turned off
                 carSpd.AddForce(-carSpd.velocity);
                 maxSpd.MaxSpeed = 150;
                 timer = 0;

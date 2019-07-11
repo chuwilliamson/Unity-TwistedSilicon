@@ -30,9 +30,12 @@ namespace Beaux
             if (collision.gameObject.tag == "Player")
             {
                 //Can't remember how to call script's piece without getComponent
+                var shieldActivate = user.GetComponent<CarFactorBehaviour>();
+                shieldActivate.shieldOn = false;
                 //user.CarFactorBehaviour.shieldOn = false;
                 //
                 //Meant to lower current speed by such
+                collision.rigidbody.AddForce(collision.rigidbody.velocity / 50);
                 //collision.rigidbody.velocity -= 50;
                 //
             }

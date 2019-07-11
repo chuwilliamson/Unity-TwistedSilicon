@@ -24,7 +24,7 @@ namespace Beaux
             CarFactorBehaviour shieldCheck = collision.gameObject.GetComponent<CarFactorBehaviour>();
             if (collision.gameObject.tag == "Player" && shieldCheck.shieldOn == false)
             {
-                //Meant to lower current speed by such
+                //Meant to lower car's current speed by such
                 collision.rigidbody.AddForce(collision.rigidbody.velocity/30);
             
             }
