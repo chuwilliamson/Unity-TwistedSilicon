@@ -16,6 +16,12 @@ namespace Beaux
         [SerializeField]
         GameObject buttons;
 
+        [SerializeField]
+        GameObject LaserPrefab;
+
+        [SerializeField]
+        GameObject RocketPrefab;
+
         public int itemValue;
 
         public bool shieldOn;
@@ -84,7 +90,17 @@ namespace Beaux
                 {
                     thebutton.button.SetActive(true);
                 }
+                //////////THIS IS LIST OF ITEM USAGE CODE//////////////////////////////////
+                if (itemValue >= 41 && itemValue <= 60)
+                {
+                    car.GetComponent<ShieldBehaviour>().enabled = true;
+                    shieldOn = true;
+                }
 
+                if (itemValue >= 61 && itemValue <=80)
+                {
+                    var boostBehaviour = car.GetComponent<BoostBehaviour>().enabled = true;
+                }
 
                 //Still unsure the true purpose of this. I think I have to set a function for the 
                 // corresponding button
@@ -94,7 +110,13 @@ namespace Beaux
             //TEST CODE DO NOT USE
             if (Input.GetKeyDown(KeyCode.RightShift))
             {
-                car.GetComponent<BoostBehaviour>().enabled = true;
+                GameObject newLaser = Instantiate(LaserPrefab, new Vector3(car.transform.position.x, 
+                                        car.transform.position.y+1, 
+                                        car.transform.position.z),
+                                            car.transform.rotation);
+
+                newLaser.transform.forward = car.transform.forward;
+                newLaser.transform.position += newLaser.transform.forward * 5;
             }
 
 

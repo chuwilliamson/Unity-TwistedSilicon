@@ -6,38 +6,41 @@ namespace Beaux
 {
     public class ShieldBehaviour : MonoBehaviour
     {
-
+        [SerializeField]
         GameObject user;
 
         // Update is called once per frame
-        void Update()
+        void OnEnable()
         {
-
+            if (user == null)
+            {
+                user = GetComponent<GameObject>();
+            }
         }
 
         private void OnCollisionExit(Collision collision)
         {
-            if (collision.gameObject.tag == "item")
+            if (collision.gameObject.tag == "Item")
             {
-                //Can't remember how to call script's piece without getComponent
-                //user.CarFactorBehaviour.shieldOn = false;
+                var shieldActivate = user.GetComponent<CarFactorBehaviour>();
+                shieldActivate.shieldOn = false;
                 //
+                this.enabled = false;
             }
         }
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.tag == "Player")
+            
+            if (collision.gameObject.CompareTag("Player"))
             {
-                //Can't remember how to call script's piece without getComponent
                 var shieldActivate = user.GetComponent<CarFactorBehaviour>();
                 shieldActivate.shieldOn = false;
-                //user.CarFactorBehaviour.shieldOn = false;
                 //
                 //Meant to lower current speed by such
                 collision.rigidbody.AddForce(collision.rigidbody.velocity / 50);
-                //collision.rigidbody.velocity -= 50;
                 //
+                this.enabled = false;
             }
         }
     }
