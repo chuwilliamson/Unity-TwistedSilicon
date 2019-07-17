@@ -10,10 +10,10 @@ namespace Beaux
         float respawn;
 
         //This will simply hold the gameobjexct so I don't have the call it again and clarity.
-        GameObject itemCrystal;
+        public GameObject itemCrystal;
         private void Start()
         {
-            itemCrystal = GetComponent<GameObject>();
+          //  itemCrystal = GetComponent<GameObject>();
         }
 
         // Update is called once per frame
@@ -23,7 +23,7 @@ namespace Beaux
             if (respawn <= 240)
             {
                 //Increases if otherwise, but keeps off
-                itemCrystal.SetActive(false);
+               // itemCrystal.SetActive(false);
                 respawn += Time.deltaTime * 60;
             }
             else
@@ -36,17 +36,18 @@ namespace Beaux
         void OnTriggerEnter(Collider other)
         {
             //Makes sure that a car is hitting the item box, while also making sure the box is there
-            if (other.gameObject.tag == "Player" && respawn >= 240)
+            if (other.gameObject.tag == "Player"/* && respawn >= 240*/)
             {
-                var value = other.GetComponent<CarFactorBehaviour>(); 
-                //Gives an item to the car colliding with it, then disappears for a set time
-                if (value.itemValue != 0)
-                {
-                    //Sets the item code for the car
-                    value.itemValue = Random.Range(1, 100);
-                    //Then sets the box back to false
-                    respawn = 0;
-                }
+                itemCrystal.SetActive(false);
+                //var value = other.GetComponent<CarFactorBehaviour>(); 
+                ////Gives an item to the car colliding with it, then disappears for a set time
+                //if (value.itemValue != 0)
+                //{
+                //    //Sets the item code for the car
+                //    value.itemValue = Random.Range(1, 100);
+                //    //Then sets the box back to false
+                //    respawn = 0;
+                //}
 
             }
         }
