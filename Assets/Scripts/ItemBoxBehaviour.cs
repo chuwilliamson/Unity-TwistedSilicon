@@ -6,14 +6,14 @@ namespace Beaux
 {
     public class ItemBoxBehaviour : MonoBehaviour
     {
-        
+        // The timer until the crystal reappears
         float respawn;
 
+        //This will simply hold the gameobjexct so I don't have the call it again and clarity.
         GameObject itemCrystal;
         private void Start()
         {
             itemCrystal = GetComponent<GameObject>();
-            
         }
 
         // Update is called once per frame
@@ -22,12 +22,13 @@ namespace Beaux
             //Checks to see if the item box is still not active
             if (respawn <= 240)
             {
-                
+                //Increases if otherwise, but keeps off
                 itemCrystal.SetActive(false);
                 respawn += Time.deltaTime * 60;
             }
             else
             {
+                //turns on
                 itemCrystal.SetActive(true);
             }
         }
@@ -41,13 +42,11 @@ namespace Beaux
                 //Gives an item to the car colliding with it, then disappears for a set time
                 if (value.itemValue != 0)
                 {
+                    //Sets the item code for the car
                     value.itemValue = Random.Range(1, 100);
-
+                    //Then sets the box back to false
                     respawn = 0;
                 }
-
-                // Ideas: Create random definition for Target Item
-                //        Create random Power_prefab for each item, then spawn when necessary
 
             }
         }

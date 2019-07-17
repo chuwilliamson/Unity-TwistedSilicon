@@ -16,9 +16,8 @@ namespace Beaux
         // Use this for initialization
         void Start()
         {
-            //Meant to represent starting speed
-            //rigidbody.constantForce *= 180;
-            //
+
+            //Targets first like a Blue Shell, or targets 2nd if you're in first.
             if (user != placement[0])
             {
                 target = placement[0];
@@ -30,7 +29,7 @@ namespace Beaux
 
             //Meant to lower current speed by such
             //target.gameObject.velocity -= 80;
-            //
+            //Also needs the UI tomfuckery
 
             counter = 0;
         }

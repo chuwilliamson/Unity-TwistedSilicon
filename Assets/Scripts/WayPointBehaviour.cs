@@ -16,7 +16,7 @@ namespace Beaux
         // Because this is a trigger function
         private void OnTriggerEnter(Collider other)
         {
-
+            //The car increases its waypoint number to adjust their positions/missile targets
             var cb = other.GetComponent<CarFactorBehaviour>();
             cb.WayPointPass += 1;
         }

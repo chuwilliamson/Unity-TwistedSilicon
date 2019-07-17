@@ -6,7 +6,7 @@ namespace Beaux
 {
     public class PlaceHolderBehaviour : MonoBehaviour
     {
-
+        //================THIS SHOULD WORK! NOT YET TESTED! =========================
         GameObject play1;
         GameObject play2;
         GameObject play3;
@@ -17,6 +17,7 @@ namespace Beaux
         // Use this for initialization
         void Start()
         {
+            //Throws all cars in
             if (play1 != null)
             {
                 placement.Add(play1);
@@ -42,14 +43,17 @@ namespace Beaux
             {
                 for (int j = 0; j < placement.Count; j++)
                 {
-                    //Can't remember how to call script's piece without getComponent
-                    //if ((placement[j].CarFactorBehaviour.wayPointPass>placement[i].CarFactorBehaviour.wayPointPass) && j>i)//
-                    //{
-                    //    List<GameObject> temp = placement;
-                    //    temp[i] = placement[j];
-                    //    temp[j] = placement[i];
-                    //    placement = temp;
-                    //}
+                    //This should reorder all the cars by placement
+                    CarFactorBehaviour iCFB = placement[i].GetComponent<CarFactorBehaviour>();
+                    CarFactorBehaviour jCFB = placement[j].GetComponent<CarFactorBehaviour>();
+                    
+                    if ((jCFB.WayPointPass > iCFB.WayPointPass) && j>i)
+                    {
+                        List<GameObject> temp = placement;
+                        temp[i] = placement[j];
+                        temp[j] = placement[i];
+                        placement = temp;
+                    }
                 }
             }
         }

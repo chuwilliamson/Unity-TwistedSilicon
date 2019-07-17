@@ -8,6 +8,12 @@ namespace Beaux
     {
 
         GameObject user;
+        public GameObject User
+        {
+            get { return user; }
+            set { user = value; }
+        }
+
         GameObject target;
         List<GameObject> placement;
 
@@ -43,14 +49,18 @@ namespace Beaux
         }
         private void OnCollisionEnter(Collision collision)
         {
-            //Can't remember how to call script's piece without getComponent
-            //if(collision.gameObject.tag == "Player" && collision.gameObject.CarFactorBehaviour.
-            //                                            shieldOn == false)//
-            //{
-            //Meant to lower current speed by such
-            //collision.rigidbody.velocity -= 40;
-            //
-            //}
+            CarFactorBehaviour shieldCheck = collision.gameObject.GetComponent<CarFactorBehaviour>();
+            if (collision.gameObject.tag == "Player" && shieldCheck.shieldOn == false)
+            {
+                //Meant to lower car's current speed by such
+                collision.rigidbody.AddForce(-collision.rigidbody.velocity / 40);
+            }
+
+            //If it hits anything that isn't the user of the item
+            if (collision.gameObject != user)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
