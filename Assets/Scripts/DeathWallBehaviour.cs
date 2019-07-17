@@ -8,6 +8,7 @@ public class DeathWallBehaviour : MonoBehaviour
 {
 
     public GameObject[] Waypoint;
+    public GameObject PauseMenu;
     private int curntpoint = 0;
     private NavMeshAgent agent;
     public int LapCounter = 0;
@@ -16,6 +17,7 @@ public class DeathWallBehaviour : MonoBehaviour
     public bool[] isDead;
     public bool Lost = false;
     public bool Won = false;
+    public bool paused = false;
 
 
     void Start()
@@ -145,7 +147,25 @@ public class DeathWallBehaviour : MonoBehaviour
         {
             Won = true;
 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
+        }
+        
+
+        if (paused == false)
+        {
+            PauseMenu.SetActive(false);
+            Time.timeScale = 1.0f;
+        }
+
+        if (paused == true)
+        {
+            Time.timeScale = 0.0f;
+            PauseMenu.SetActive(true);
+        }
+
+        if(Input.GetAxis("Pause") == 1 || Input.GetKeyDown("escape"))
+        {
+            paused = true;
         }
 
     }

@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class CounterBehaviour : MonoBehaviour {
     public int lapCounter = 0;
-    int i = 0;
     public bool chetCheck = true;
 
     void Start ()
