@@ -15,6 +15,10 @@ namespace Beaux
         [SerializeField]
         bool isAI;
 
+
+        public GameObject[] Enemies;
+
+
         bool IsAI
         {
             get { return isAI; }
@@ -62,17 +66,17 @@ namespace Beaux
             var children = buttons.GetComponentsInChildren<GameObject>();
             int min = 1;
             int max = min + 19;
-            foreach (var child in children)
-            {
-                var br = new ButtonRange
-                {
-                    button = child,
-                    range = new Vector2(min, max)
-                };
-                min = max;
-                max += 20;
-                buttonRanges.Add(br);
-            }
+            //foreach (var child in children)
+            //{
+            //    var br = new ButtonRange
+            //    {
+            //        button = child,
+            //        range = new Vector2(min, max)
+            //    };
+            //    min = max;
+            //    max += 20;
+            //    buttonRanges.Add(br);
+            //}
             
         }
 
@@ -103,11 +107,11 @@ namespace Beaux
         void Update()
         {
             //This should set the UI to activate once hooked up
-            var thebutton = GetTheButton(itemValue);
-            if (thebutton != null)
-            {
-                thebutton.button.SetActive(true);
-            }
+            //var thebutton = GetTheButton(itemValue);
+            //if (thebutton != null)
+            //{
+            //    thebutton.button.SetActive(true);
+            //}
 
             //This should handle the Item Button
             if (Input.GetKeyDown(KeyCode.Return))
@@ -149,22 +153,20 @@ namespace Beaux
 
                 //Still unsure the true purpose of this. I think I have to set a function for the 
                 // corresponding button
-                thebutton.Response.Invoke();
+                //thebutton.Response.Invoke();
             }
 
             //TEST CODE DO NOT USE, Tests each item individually, before addingto the cycle
             if (Input.GetKeyDown(KeyCode.RightShift))
             {
                 //LASER TEST CODE (worthless at this point)
-                GameObject newLaser = Instantiate(LaserPrefab, new Vector3(car.transform.position.x, 
+                GameObject newRocket = Instantiate(RocketPrefab, new Vector3(car.transform.position.x, 
                                         car.transform.position.y+1, 
                                         car.transform.position.z),
                                             car.transform.rotation);
-                Destroy(newLaser, 15);
-                LaserBehaviour lsrScrpt = newLaser.GetComponent<LaserBehaviour>();
-                lsrScrpt.User = car;
-                newLaser.transform.forward = car.transform.forward;
-                newLaser.transform.position += newLaser.transform.forward * 5;
+                TrueMissleBehaviour rktScrpt = newRocket.GetComponent<TrueMissleBehaviour>();
+                rktScrpt.User = car.gameObject;
+                newRocket.transform.position += newRocket.transform.forward * 5;
             }
 
 
