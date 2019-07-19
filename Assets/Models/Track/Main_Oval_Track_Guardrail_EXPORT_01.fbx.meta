@@ -7,20 +7,54 @@ ModelImporter:
     100002: //RootNode
     100004: polySurface1
     100006: polySurface2
+    100008: Guardrail_Oval_Track.001
+    100010: Guardrail_Oval_Track.000
+    100012: Main_Track_Piece
+    100014: Guardrail_Oval_Track.002
+    100016: Guardrail
+    100018: Rail_Collision
+    100020: Track
     400000: Guardrail_Oval_Track
     400002: //RootNode
     400004: polySurface1
     400006: polySurface2
+    400008: Guardrail_Oval_Track.001
+    400010: Guardrail_Oval_Track.000
+    400012: Main_Track_Piece
+    400014: Guardrail_Oval_Track.002
+    400016: Guardrail
+    400018: Rail_Collision
+    400020: Track
     2100000: lambert1
+    2100002: lambert1.002
+    2100004: lambert1.001
     2300000: Guardrail_Oval_Track
     2300002: polySurface1
     2300004: polySurface2
+    2300006: Guardrail_Oval_Track.001
+    2300008: Guardrail_Oval_Track.000
+    2300010: Guardrail_Oval_Track.002
+    2300012: Guardrail
+    2300014: Rail_Collision
+    2300016: Track
     3300000: Guardrail_Oval_Track
     3300002: polySurface1
     3300004: polySurface2
+    3300006: Guardrail_Oval_Track.001
+    3300008: Guardrail_Oval_Track.000
+    3300010: Guardrail_Oval_Track.002
+    3300012: Guardrail
+    3300014: Rail_Collision
+    3300016: Track
     4300000: polySurface1
     4300002: polySurface2
     4300004: Guardrail_Oval_Track
+    4300006: Guardrail_Oval_Track.001
+    4300008: Guardrail_Oval_Track.000
+    4300010: Guardrail_Oval_Track.002
+    4300012: Guardrail
+    4300014: Track
+    4300016: Rail_Collision
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -60,7 +94,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

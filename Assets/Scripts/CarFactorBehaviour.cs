@@ -55,6 +55,10 @@ namespace Beaux
         // Use this for initialization
         void Start()
         {
+            buttonRanges = new List<ButtonRange>();
+
+            itemValue = 0;
+
             shieldOn = false;
             wayPointPass = 0;
 
