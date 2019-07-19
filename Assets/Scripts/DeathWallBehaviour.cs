@@ -89,25 +89,25 @@ public class DeathWallBehaviour : MonoBehaviour
     void Update()
     {
 
-        if (Players[0].transform.position.y <= -120)
+        if (Players[0].transform.position.y <= -25)
         {
             isDead[0] = true;
             Players[0].SetActive(false);
         }
 
-        if (Players[1].transform.position.y <= -120)
+        if (Players[1].transform.position.y <= -25)
         {
             isDead[1] = true;
             Players[1].SetActive(false);
         }
 
-        if (Players[2].transform.position.y <= -120)
+        if (Players[2].transform.position.y <= -25)
         {
             isDead[2] = true;
             Players[2].SetActive(false);
         }
 
-        if (Players[3].transform.position.y <= -120)
+        if (Players[3].transform.position.y <= -25)
         {
             isDead[3] = true;
             Players[3].SetActive(false);
