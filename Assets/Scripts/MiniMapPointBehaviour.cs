@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class MiniMapPointBehaviour : MonoBehaviour
 {
-    
 
     [SerializeField]
     GameObject car;
-
-    // Use this for initialization
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()

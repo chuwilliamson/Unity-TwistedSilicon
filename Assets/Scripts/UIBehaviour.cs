@@ -12,12 +12,6 @@ public class UIBehaviour : MonoBehaviour {
     public GameObject[] txt;
     public GameObject spedyboi;
 
-
-	void Start ()
-    {
-
-    }
-
     void Update ()
     {
         NumberHoldings[0] = Laps[0].GetComponent<CounterBehaviour>().lapCounter;
@@ -25,8 +19,6 @@ public class UIBehaviour : MonoBehaviour {
         NumberHoldings[2] = Laps[2].GetComponent<CounterBehaviour>().lapCounter;
         NumberHoldings[3] = Laps[3].GetComponent<CounterBehaviour>().lapCounter;
         NumberHoldings[4] = Laps[4].GetComponent<DeathWallBehaviour>().LapCounter;
-
-
 
         txt[0].GetComponent<Text>().text = "Player 1 Laps: " + NumberHoldings[0];
         txt[1].GetComponent<Text>().text = "Player 2 Laps: " + NumberHoldings[1];
@@ -37,6 +29,5 @@ public class UIBehaviour : MonoBehaviour {
         spedyness = spedyboi.GetComponent<UnityStandardAssets.Vehicles.Car.CarController>().CurrentSpeed;
 
         sped.GetComponent<Text>().text = "KPH: " + spedyness;
-
     }
 }

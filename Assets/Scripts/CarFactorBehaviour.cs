@@ -15,9 +15,7 @@ namespace Beaux
         [SerializeField]
         bool isAI;
 
-
         public GameObject[] Enemies;
-
 
         bool IsAI
         {
@@ -70,6 +68,7 @@ namespace Beaux
             var children = buttons.GetComponentsInChildren<GameObject>();
             int min = 1;
             int max = min + 19;
+            // Taken code for now.
             //foreach (var child in children)
             //{
             //    var br = new ButtonRange
@@ -81,7 +80,7 @@ namespace Beaux
             //    max += 20;
             //    buttonRanges.Add(br);
             //}
-            
+
         }
 
         //Holds button, the range of values that equals it, and possibly a script's activation.
@@ -103,14 +102,13 @@ namespace Beaux
             }
 
             return null;
-
         }
 
         GameObject turnThisOff;
         // Update is called once per frame
         void Update()
         {
-            //This should set the UI to activate once hooked up
+            //This should set the UI to activate once hooked up. Taken code for now.
             //var thebutton = GetTheButton(itemValue);
             //if (thebutton != null)
             //{
@@ -156,7 +154,7 @@ namespace Beaux
                 }
 
                 //Still unsure the true purpose of this. I think I have to set a function for the 
-                // corresponding button
+                // corresponding button. Taken code for now.
                 //thebutton.Response.Invoke();
             }
 
@@ -172,76 +170,12 @@ namespace Beaux
                 rktScrpt.User = car.gameObject;
                 newRocket.transform.position += newRocket.transform.forward * 5;
             }
-
-
             //0      no item
             //1-20   missile
             //21-40  laser
             //41-60  shield
             //61-80  boost
             //81-100 virus
-
-            ///////////////////////////////////////////////////////////////////////////////////////
-            //=======UNUSED CODE, BUT GIVES A RELATIVE GUIDE, DELETE LATER ONCE FINISHED===========
-            ///////////////////////////////////////////////////////////////////////////////////////
-
-            //if (itemValue <= 1 && itemValue >= 20)
-            //{
-            //need to figure out where to activate the button for the UI
-            //    buttons.SetActive(true);
-
-            //
-            //    if (Input.GetKeyDown(KeyCode.Return))
-            //    {
-            //create missile
-            //take off of UI
-            //    }
-            //}
-            //if (itemValue <= 21 && itemValue >= 40)
-            //{
-            //need to figure out where to activate the button for the UI
-            //    buttons.SetActive(true);
-            //
-            //    if (Input.GetKeyDown(KeyCode.Return))
-            //    {
-            //Create laser
-            //take off of UI
-            //    }
-            //}
-            //if (itemValue <= 41 && itemValue >= 60)
-            //{
-            //need to figure out where to activate the button for the UI
-            //    buttons.Shield.Active();
-            //
-            //    shieldOn = true;
-            //    if (Input.GetKeyDown(KeyCode.Return))
-            //    {
-            //shield behaviour(make it connected to car)
-            //take off of UI
-            //    }
-            //}
-            //if (itemValue <= 61 && itemValue >= 80)
-            //{
-            //need to figure out where to activate the button for the UI
-            //  buttons.Boost.Active();
-            //
-            //if (Input.GetKeyDown(KeyCode.Return))
-            //{
-            //Run boost script
-            //take off of UI
-            //}
-            //}
-            //if (itemValue <= 81 && itemValue >= 100)
-            //{
-            //need to figure out where to activate the button for the UI
-            //  buttons.VirusBehaviour.Enable();
-            //
-            //if (Input.GetKeyDown(KeyCode.Return))
-            //{
-            //Run virus script
-            //take off of UI
-            //}
-            //}
         }
     }
 }

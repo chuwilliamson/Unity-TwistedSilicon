@@ -8,5 +8,4 @@ public class QuitBehaviour : MonoBehaviour
     {
         Application.Quit();
     }
-
 }

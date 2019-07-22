@@ -8,11 +8,6 @@ public class CounterBehaviour : MonoBehaviour {
     public int lapCounter = 0;
     public bool chetCheck = true;
 
-    void Start ()
-    {
-    }
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (chetCheck == false)
@@ -23,21 +18,11 @@ public class CounterBehaviour : MonoBehaviour {
 
                 chetCheck = true;
             }
-
         }
 
         if (other.gameObject.CompareTag("chetPoint"))
         {
             chetCheck = false;
         }
-
-
-    }
-
-
-
-    void Update ()
-    {
-
     }
 }

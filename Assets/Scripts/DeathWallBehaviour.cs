@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class DeathWallBehaviour : MonoBehaviour
 {
-
     public GameObject[] Waypoint;
     public GameObject PauseMenu;
     private int curntpoint = 0;
@@ -19,20 +18,17 @@ public class DeathWallBehaviour : MonoBehaviour
     public bool Won = false;
     public bool paused = false;
 
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
 
         agent.autoBraking = false;
 
-
         NextPoint();
     }
 
     void NextPoint()
     {
-
         if (Waypoint.Length == 0)
         {
             return;
@@ -114,7 +110,6 @@ public class DeathWallBehaviour : MonoBehaviour
         }
 
 
-
         if (!agent.pathPending && agent.remainingDistance < 50)
         {
             NextPoint();
@@ -167,6 +162,5 @@ public class DeathWallBehaviour : MonoBehaviour
         {
             paused = true;
         }
-
     }
 }
