@@ -15,5 +15,10 @@ public class GoBackBehaviour : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+
+    public void Cred()
+    {
+        SceneManager.LoadScene(5);
+    }
 }
 
